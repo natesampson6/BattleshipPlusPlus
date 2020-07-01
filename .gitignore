@@ -30,3 +30,5 @@
 *.exe
 *.out
 *.app
+BattleshipPlusPlus.layout
+Makefile.win

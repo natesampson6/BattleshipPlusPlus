@@ -13,6 +13,7 @@ class Board {
 		std::vector<std::vector<std::string> > getBoard();
 		void createBoard();
 		void showBoard();
+		void changeBoard(int r, int c);
 		bool searchForOpen(int r, int c);
 };
 

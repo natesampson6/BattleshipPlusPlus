@@ -22,8 +22,8 @@ std::vector<std::vector<std::string> > Board::getBoard() {
 void Board::createBoard() {
 	std::vector<std::vector<std::string> > board = {
 		{"O", "O", "O", "O", "O", "O", "O", "O", "O", "O"},
-		{"O", "O", "O", "O", "M", "O", "O", "O", "O", "O"},
-		{"O", "O", "O", "O", "X", "O", "O", "O", "O", "O"},
+		{"O", "O", "O", "O", "O", "O", "O", "O", "O", "O"},
+		{"O", "O", "O", "O", "O", "O", "O", "O", "O", "O"},
 		{"O", "O", "O", "O", "O", "O", "O", "O", "O", "O"},
 		{"O", "O", "O", "O", "O", "O", "O", "O", "O", "O"},
 		{"O", "O", "O", "O", "O", "O", "O", "O", "O", "O"},
@@ -45,6 +45,10 @@ void Board::showBoard() {
 	}
 	
 	std::cout << "\n";
+}
+
+void Board::changeBoard(int r, int c) {
+	masterGameBoard[r][c] = "X";
 }
 
 bool Board::searchForOpen(int r, int c) {

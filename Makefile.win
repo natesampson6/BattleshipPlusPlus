@@ -4,8 +4,8 @@
 CPP      = g++.exe -D__DEBUG__
 CC       = gcc.exe -D__DEBUG__
 WINDRES  = windres.exe
-OBJ      = src/board.o src/main.o
-LINKOBJ  = src/board.o src/main.o
+OBJ      = src/board.o src/main.o src/action.o src/shipCreator.o
+LINKOBJ  = src/board.o src/main.o src/action.o src/shipCreator.o
 LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -g3
 INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
 CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
@@ -29,3 +29,9 @@ src/board.o: src/board.cpp
 
 src/main.o: src/main.cpp
 	$(CPP) -c src/main.cpp -o src/main.o $(CXXFLAGS)
+
+src/action.o: src/action.cpp
+	$(CPP) -c src/action.cpp -o src/action.o $(CXXFLAGS)
+
+src/shipCreator.o: src/shipCreator.cpp
+	$(CPP) -c src/shipCreator.cpp -o src/shipCreator.o $(CXXFLAGS)
